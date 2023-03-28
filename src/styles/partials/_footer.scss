@@ -1,0 +1,40 @@
+@use "variables" as *;
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  background-color: $n-f-color;
+  margin-top: 5vh;
+  height: 100px;
+
+  .container {
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: $coral-pink;
+    transition: 0.2s ease-in-out;
+    margin-top: 10px;
+    display: inline-block;
+
+    &:hover,
+    &:focus {
+      color: $light-green;
+    }
+  }
+
+  @media (max-width: $mq-big-mobile) {
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}

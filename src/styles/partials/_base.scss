@@ -1,0 +1,42 @@
+@use "variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $bg-color;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+  appearance: none;
+  color: $black;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  .main {
+    flex-grow: 1;
+    margin-block: 30px;
+  }
+}

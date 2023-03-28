@@ -1,0 +1,41 @@
+@use "./variables" as *;
+
+.login {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    color: $black;
+    margin-top: 7px;
+  }
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: $light-grey;
+  padding: 30px;
+}
+
+.login-textbox {
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.login-btn {
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  border: none;
+  color: $white;
+  background-color: $black;
+}
+
+.login-google {
+  background-color: $google-blue;
+}
