@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 <h1>GAMESHELF</h1>
-An SPA created with React and the [Board Atlas board game API](https://www.boardgameatlas.com/api/docs) along with Firebase. The goal is to make an app where you can:
+An SPA created with React and the <a href="https://www.boardgameatlas.com/api/docs">Board Atlas board game API</a> along with Firebase. The goal is to make an app where you can:
   <ol>
     <li>sign in to your own account</li>
     <li>add board games you own to your personal database of games</li>
