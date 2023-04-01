@@ -5,7 +5,7 @@
 .nav-container {
   height: 6vh;
   min-height: 60px;
-  background-color: $n-f-color;
+  background-color: $bg-colortwo;
 
   nav {
     display: flex;
@@ -21,15 +21,15 @@
 
   a {
     text-decoration: none;
-    color: $aqua-blue;
-    text-shadow: 0px 0px 20px $aqua-blue, 0px 0px 10px $coral-pink;
+    color: $text-colorthree;
+    text-shadow: 0px 0px 20px $text-colorthree, 0px 0px 10px $text-color;
     text-transform: uppercase;
     display: flex;
     transition: 0.2s ease-in-out;
 
     &:hover,
     &:focus {
-      color: $coral-pink;
+      color: $text-colortwo;
     }
   }
 
@@ -52,7 +52,7 @@
       height: 100vh;
       transition: 0.5s;
       z-index: 10000;
-      background: rgba($n-f-color, 0.7);
+      background: rgba($bg-colortwo, 0.7);
       backdrop-filter: blur(5px);
       border: 1px solid rgba($white, 0.3);
     }
@@ -80,7 +80,7 @@
   .hamburger,
   .close {
     font-size: 2rem;
-    color: $aqua-blue;
+    color: $text-colortwo;
   }
 
   button {
@@ -92,11 +92,11 @@
   button:focus .close,
   button:hover .hamburger,
   button:focus .hamburger {
-    color: $coral-pink;
+    color: $text-colortwo;
     transition: 0.2s ease-in-out;
 
     i {
-      transition: $coral-pink;
+      transition: $text-colortwo;
     }
   }
 }

@@ -11,7 +11,7 @@ footer {
     padding: 0;
     text-align: center;
   }
-  background-color: $n-f-color;
+  background-color: $bg-colortwo;
   margin-top: 5vh;
   height: 100px;
 
@@ -21,14 +21,14 @@ footer {
 
   a {
     text-decoration: none;
-    color: $coral-pink;
+    color: $text-color;
     transition: 0.2s ease-in-out;
     margin-top: 10px;
     display: inline-block;
 
     &:hover,
     &:focus {
-      color: $light-green;
+      color: $text-colortwo;
     }
   }
 

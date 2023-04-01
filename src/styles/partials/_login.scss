@@ -19,12 +19,15 @@
   text-align: center;
   background-color: $light-grey;
   padding: 30px;
+  border-radius: 20px;
+  // box-shadow: 5px 5px 5px $text-colorthree;
 }
 
 .login-textbox {
   padding: 10px;
   font-size: 18px;
   margin-bottom: 10px;
+  border-radius: 20px;
 }
 
 .login-btn {
@@ -35,6 +38,7 @@
   color: $white;
   background-color: $black;
   cursor: pointer;
+  border-radius: 20px;
 }
 
 .login-google {
