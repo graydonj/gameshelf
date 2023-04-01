@@ -1,5 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Login from "./Login";
+import Register from "./Register";
+import Reset from "./Reset";
 import "./styles/App.scss";
 
 function App() {
@@ -10,6 +12,8 @@ function App() {
       </header>
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/reset" element={<Reset />} />
       </Routes>
     </div>
   );
