@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, redirect } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { auth, registerWithEmailAndPassword, signInWithGoogle } from './firebase';
 import Swal from 'sweetalert2';
 
@@ -11,6 +11,7 @@ function Register() {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [user, loading, error] = useAuthState(auth);
+  const navigate = useNavigate();
 
   // register without Google
   const register = () => {
@@ -20,6 +21,7 @@ function Register() {
         title: "Username Empty",
         text: "Please enter a user name"
       });
+      return;
     }
     registerWithEmailAndPassword(name, email, password);
   }
@@ -27,7 +29,7 @@ function Register() {
   // if we are loading pop out; if the user is valid go to the dashboard
   useEffect(() => {
     if (loading) return;
-    if (user) return redirect("/dashboard");
+    if (user) return navigate("/dashboard");
   }, [user, loading]);
 
   return (

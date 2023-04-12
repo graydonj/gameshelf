@@ -1,0 +1,47 @@
+@use "./variables" as *;
+
+.dashboard {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    color: $black;
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: $light-grey;
+  padding: 30px;
+  border-radius: 20px;
+  // box-shadow: 5px 5px 5px $text-colorthree;
+}
+
+.dashboard-textbox {
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+
+.dashboard-btn {
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  border: none;
+  color: $white;
+  background-color: $black;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.dashboard-google {
+  background-color: $google-blue;
+}

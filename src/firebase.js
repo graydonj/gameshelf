@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
+import { wait } from "@testing-library/user-event/dist/utils";
 import { initializeApp } from "firebase/app";
-import { GoogleAuthProvider, getAuth, signInWithPopup, signInWithEmailAndPassword, sendPasswordResetEmail, signOut, createUserWithEmailAndPassword, } from "firebase/auth";
+import { GoogleAuthProvider, getAuth, signInWithPopup, signInWithEmailAndPassword, sendPasswordResetEmail, signOut, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { getFirestore, query, getDocs, collection, where, addDoc, } from "firebase/firestore";
 import Swal from "sweetalert2";
 
@@ -66,15 +67,12 @@ const logInWithEmailAndPassword = async (email, password) => {
 }
 
 // we know the user is not in the database, so we register them
-const registerWithEmailAndPassword = async (name, email, password) => {
+const registerWithEmailAndPassword = async (displayName, email, password) => {
   try {
     const res = await createUserWithEmailAndPassword(auth, email, password);
     const user = res.user;
-    await addDoc(collection(db, "users"), {
-      uid: user.uid,
-      name,
-      authProvider: "local",
-      email,
+    await updateProfile(user, {
+      displayName: displayName,
     });
   } catch (err) {
     Swal.fire({
